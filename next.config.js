@@ -4,6 +4,7 @@ const nextConfig = {
   i18n: {
     locales: ['en', 'vi'],
     defaultLocale: 'en',
+    fallback: false
   },
 }
 
