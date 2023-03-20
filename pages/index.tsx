@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { HUB_BASE_URL } from '@/constant'
+import useTrans from './hooks/useTrans'
 
 
 export default function Home() {
@@ -12,6 +13,8 @@ export default function Home() {
         setTest(res?.data?.products)
       })
   }, [])
+
+  const trans = useTrans()
   return (
     <>
       <Head>
@@ -26,6 +29,9 @@ export default function Home() {
           <div key={data?._id}>{data?.inStock}</div>
         ))
       }
+      <h1>
+                    { trans.home.title }
+                </h1>
     </>
   )
 }
