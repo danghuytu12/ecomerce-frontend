@@ -1,5 +1,4 @@
-/* eslint-disable import/no-anonymous-default-export */
-export default {
+export const test1 = {
     home: {
         title: 'Welcome!',
         content: 'Bắt đầu một bài viết nào',

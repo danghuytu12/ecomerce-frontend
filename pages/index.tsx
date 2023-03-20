@@ -14,7 +14,7 @@ export default function Home() {
       })
   }, [])
 
-  const trans = useTrans()
+  // const trans = useTrans()
   return (
     <>
       <Head>
@@ -29,9 +29,9 @@ export default function Home() {
           <div key={data?._id}>{data?.inStock}</div>
         ))
       }
-      <h1>
-                    { trans.home.title }
-                </h1>
+      {/* <h1>
+        {trans.home.title}
+      </h1> */}
     </>
   )
 }

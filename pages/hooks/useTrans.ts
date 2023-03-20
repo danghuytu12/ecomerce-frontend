@@ -1,11 +1,26 @@
 import { useRouter } from 'next/router'
-import en from '../../public/lang/en'
-import vi from '../../public/lang/vi'
 
-const useTrans = () => {
+export const test1 = {
+    home: {
+        title: 'Welcome!',
+        content: 'Bắt đầu một bài viết nào',
+    }
+}
+
+
+export const test = {
+    home: {
+        title: 'Welcome!',
+        content: 'Bắt đầu một bài viết nào',
+    }
+}
+
+
+
+function useTrans() {
     const { locale } = useRouter()
 
-    const trans = locale === 'vi' ? vi : en
+    const trans = locale === 'vi' ? test1 : test
 
     return trans
 }
