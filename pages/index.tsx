@@ -2,16 +2,10 @@ import Head from 'next/head'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { HUB_BASE_URL } from '@/constant'
+import Product from '@/components/home/Product'
 
 
 export default function Home() {
-  const [test, setTest] = useState<any>([])
-  useEffect(() => {
-    axios.get(`${HUB_BASE_URL}/api/products`)
-      .then(res => {
-        setTest(res?.data?.products)
-      })
-  }, [])
   return (
     <>
       <Head>
@@ -20,12 +14,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className='text-red-400'>đasadsadsad</div>
-      {
-        test?.map((data: any) => (
-          <div key={data?._id}>{data?.inStock}</div>
-        ))
-      }
+     <Product />
+     <Product />
+     <Product />
     </>
   )
 }
