@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { HUB_BASE_URL } from '@/constant'
 import Product from '@/components/home/Product'
+import Footer from '@/components/footer'
 
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
      <Product />
      <Product />
      <Product />
+      <Footer />
     </>
   )
 }
