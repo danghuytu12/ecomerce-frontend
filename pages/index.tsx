@@ -4,6 +4,7 @@ import axios from 'axios'
 import { HUB_BASE_URL } from '@/constant'
 import Product from '@/components/home/Product'
 import Footer from '@/components/footer'
+import Banner from '@/components/bannner'
 
 
 export default function Home() {
@@ -15,9 +16,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-     <Product />
-     <Product />
-     <Product />
+      <Banner />
+      <Product />
+      <Product />
+      <Product />
       <Footer />
     </>
   )
